@@ -1,0 +1,9 @@
+[submodule "blog-database"]
+	path = blog-database
+	url = git@github.com:zhihil/blog-database.git
+[submodule "blog-frontend"]
+	path = blog-frontend
+	url = git@github.com:zhihil/blog-frontend.git
+[submodule "blog-backend"]
+	path = blog-backend
+	url = git@github.com:zhihil/blog-backend.git

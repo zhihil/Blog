@@ -1,0 +1,20 @@
+version: "3.7"
+
+services:
+  app:
+    image: blog-backend
+    command: sh -c "npm install && npm run dev"
+    ports:
+      - 3000:3000
+    working_dir: /blog-backend
+    volumes:
+      - ./blog-backend/:/blog-backend
+  psql:
+    image: postgres
+    volumes:
+      - blog-psql-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: docker
+
+volumes:
+  blog-psql-data:
