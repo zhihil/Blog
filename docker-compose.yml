@@ -9,10 +9,13 @@ services:
     working_dir: /blog-backend
     volumes:
       - ./blog-backend/:/blog-backend
+
   psql:
     image: postgres
     volumes:
       - blog-psql-data:/var/lib/postgresql/data
+    ports:
+      - 3100:5432
     environment:
       POSTGRES_PASSWORD: docker
 
